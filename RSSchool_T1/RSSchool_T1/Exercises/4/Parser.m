@@ -60,12 +60,10 @@
         [closeBracketPositions removeAllObjects];
     }
     
-    NSLog(@"brackets: %@", bracketsPairs);
     for(NSNumber *key in [[bracketsPairs allKeys] sortedArrayUsingSelector: @selector(compare:)])
     {
         NSString *subStr = [string substringWithRange:NSMakeRange(key.intValue + 1 , ((NSNumber *)bracketsPairs[key]).intValue - key.intValue - 1)];
         [returnArray addObject:subStr];
-        NSLog(@"%@", subStr);
     }
     
     return returnArray;
