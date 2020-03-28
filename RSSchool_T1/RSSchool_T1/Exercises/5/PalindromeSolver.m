@@ -28,9 +28,7 @@
     
     int diffCount = 0;
     
-    NSMutableString *result = [NSMutableString stringWithCapacity:s.length];
-    
-    for(int i = 0, j = right.length - 1;  i < left.length && j >= 0 && kInt >= 0; i++, j--)
+    for(NSInteger i = 0, j = right.length - 1;  i < left.length && j >= 0 && kInt > 0; i++, j--)
     {
         NSString *leftChar = [left substringWithRange:NSMakeRange(i, 1)];
         NSString *rightChar = [right substringWithRange:NSMakeRange(j, 1)];
@@ -62,7 +60,7 @@
         }
     }
     
-    for(int i = 0, j = right.length - 1;  i < left.length && j >= 0; i++, j--)
+    for(NSInteger i = 0, j = right.length - 1;  i < left.length && j >= 0; i++, j--)
     {
         if([left characterAtIndex:i] != [right characterAtIndex:j])
             return TheInvalidPalindrome;

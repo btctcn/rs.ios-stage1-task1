@@ -19,8 +19,8 @@
         NSRange range = NSMakeRange(0, string.length);
         while (1)
         {
-            int rangeLocation = range.location > 0 ? range.location + 1 : 0;
-            int rangeLen = string.length - rangeLocation;
+            NSInteger rangeLocation = range.location > 0 ? range.location + 1 : 0;
+            NSInteger rangeLen = string.length - rangeLocation;
             range = [string rangeOfString:currentOpenBracket
                                   options:NSCaseInsensitiveSearch
                                     range:NSMakeRange(rangeLocation, rangeLen)];
@@ -33,8 +33,8 @@
         range = NSMakeRange(0, string.length);
         while (1)
         {
-            int rangeLocation = range.location > 0 ? range.location + 1 : 0;
-            int rangeLen = string.length - rangeLocation;
+            NSInteger rangeLocation = range.location > 0 ? range.location + 1 : 0;
+            NSInteger rangeLen = string.length - rangeLocation;
             range = [string rangeOfString:currentCloseBracket
                                   options:NSCaseInsensitiveSearch
                                     range:NSMakeRange(rangeLocation, rangeLen)];

@@ -29,7 +29,7 @@
             }
         }
         
-        for(int i = indiciesToRemove.count - 1; i >=0; i--)
+        for(NSInteger i = indiciesToRemove.count - 1; i >=0; i--)
         {
             [mutableSadArray removeObjectAtIndex:(((NSNumber *)indiciesToRemove[i]).intValue)];
         }

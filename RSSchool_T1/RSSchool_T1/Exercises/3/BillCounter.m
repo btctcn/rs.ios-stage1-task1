@@ -12,8 +12,8 @@
     
     NSNumber *actualSumAnna = [mutableBill valueForKeyPath: @"@sum.self"];
     
-    int sumAnnaInt = sum.integerValue;
-    int actualSumAnnaInt = actualSumAnna.integerValue / 2;
+    NSInteger sumAnnaInt = sum.integerValue;
+    NSInteger actualSumAnnaInt = actualSumAnna.integerValue / 2;
     
     if(actualSumAnnaInt == sumAnnaInt)
     {
@@ -21,7 +21,7 @@
     }
     else
     {
-        return [NSNumber numberWithInt:(sumAnnaInt - actualSumAnnaInt)].stringValue;
+        return [NSNumber numberWithLong:(sumAnnaInt - actualSumAnnaInt)].stringValue;
     }
 }
 
